@@ -1,13 +1,42 @@
-## Module : EC2
-### 🎯 Objectif
-Créer une instance EC2 via la console et en CLI.
+📌 Concepts clés
+AMI (Amazon Machine Image) : modèle système utilisé pour lancer l’instance.
 
-### 📌 Concepts
-- AMI, Type d'instance, Key Pair, Security Groups
+Instance type : configuration matérielle de l’instance (ex : t2.micro).
 
-### 🧪 Exercice
-1. Créer une instance t2.micro (Ubuntu)
-2. SSH dans l’instance
+Key Pair : paire de clés pour accéder à l’instance via SSH.
+
+Security Groups : pare-feu virtuel contrôlant le trafic entrant/sortant.
+
+IAM Policy & Role : gestion des permissions et association à l’instance EC2.
+
+🧪 Étapes principales de l’exercice
+🔐 1. Création de la politique IAM
+Une politique permettant d’utiliser iam:ListGroups est définie.
+
+Elle autorise l’instance à interroger la liste des groupes IAM.
+
+👥 2. Sélection de la permission ListGroups
+Permet à l’instance de récupérer tous les groupes IAM via l’API.
+
+🎭 3. Association de la politique à un rôle IAM
+⚙️ 4. Création d’un rôle IAM spécifique pour EC2
+Le rôle est lié au service EC2 pour lui accorder les permissions IAM.
+
+🔗 5. Vérification de la création du rôle EC2
+🔒 6. Création du groupe de sécurité
+Port 22 (SSH) ouvert pour l’accès distant.
+
+Port 80 (HTTP) ouvert pour l’accès web.
+
+🖥️ 7. Création de l’instance EC2
+Type : t2.micro, système Ubuntu (ou Amazon Linux selon le contexte).
+
+Rôle IAM et groupe de sécurité sont associés à l’instance.
+
+🌐 8. Récupération de l’adresse IP publique
+✅ 9. Accès à la page web générée par le script "User Data"
+La page HTML affiche dynamiquement les groupes IAM disponibles.
+
 
 1 - Avant de creer l'instance il est important de creer une politique et l'associé à l'instance ----
 
