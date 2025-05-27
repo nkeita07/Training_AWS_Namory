@@ -1,0 +1,18 @@
+## Module : EC2
+### 🎯 Objectif
+Créer une instance EC2 via la console et en CLI.
+
+### 📌 Concepts
+- AMI, Type d'instance, Key Pair, Security Groups
+
+### 🧪 Exercice
+1. Créer une instance t2.micro (Ubuntu)
+2. SSH dans l’instance
+3. Installer Apache
+
+### 🧩 Problèmes rencontrés
+- Problème SSH résolu en modifiant le Security Group.
+
+### 🔗 Ressources
+- [Docs EC2](https://docs.aws.amazon.com/ec2/)
+- [cours openclassrook– lien du chapitre: https://openclassrooms.com/fr/courses/7818631-gerez-et-optimisez-vos-solutions-dans-le-cloud-avec-aws/8109796-installez-vos-applications-web-dans-des-serveurs-sur-ec2
